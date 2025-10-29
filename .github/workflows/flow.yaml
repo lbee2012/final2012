@@ -1,0 +1,16 @@
+name: flowy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: checkout@v2
+      - uses: setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - run: mvn clean install
+      - run: mvn test
