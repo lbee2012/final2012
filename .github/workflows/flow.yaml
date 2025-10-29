@@ -7,8 +7,8 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: checkout@v2
-      - uses: setup-java@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
         with:
           java-version: '17'
           distribution: 'temurin'
